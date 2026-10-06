@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OBMC Robotics Club Application</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Courier New", monospace;
+            background: #aeb8bd;
+            color: #222;
+            overflow: hidden;
+        }
+
+        /* MAIN BACKGROUND */
+        .page {
+            min-height: 100vh;
+            position: relative;
+
+            background-image:
+                linear-gradient(
+                    rgba(210, 218, 221, 0.35),
+                    rgba(180, 190, 194, 0.25)
+                ),
+                url("al-robots-robotics-humanoid-banner.webp");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* WHITE APPLICATION FORM */
+        .application-box {
+            position: absolute;
+            left: 40px;
+            top: 15px;
+
+            width: 300px;
+            height: 489px;
+
+            background: rgba(255, 255, 255, 0.94);
+            padding: 18px 19px;
+
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        /* LOGO */
+        .logo {
+            display: block;
+            width: 47px;
+            height: auto;
+            margin: 0 auto 7px;
+        }
+
+        /* TITLE */
+        h1 {
+            margin: 0 0 19px;
+
+            text-align: center;
+
+            font-size: 13px;
+            line-height: 1.2;
+
+            color: #006eb8;
+
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* INTRO */
+        .intro {
+            font-size: 7px;
+            line-height: 1.45;
+
+            margin-bottom: 10px;
+        }
+
+        /* LABELS */
+        label,
+        .question {
+            display: block;
+
+            font-size: 7px;
+            font-weight: bold;
+
+            margin-top: 6px;
+            margin-bottom: 3px;
+        }
+
+        /* INPUTS */
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+
+            border: 1px solid #cfcfcf;
+            background: white;
+
+            font-family: "Courier New", monospace;
+            font-size: 7px;
+
+            padding: 3px;
+            outline: none;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            height: 15px;
+        }
+
+        textarea {
+            height: 36px;
+            resize: none;
+        }
+
+        /* RADIO BUTTONS */
+        .gender {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            font-size: 7px;
+        }
+
+        .gender label {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            margin: 0;
+            font-weight: normal;
+        }
+
+        input[type="radio"] {
+            width: 8px;
+            height: 8px;
+            margin: 0;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            gap: 7px;
+            align-items: center;
+        }
+
+        .skills label {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+
+            margin: 0;
+            font-weight: normal;
+        }
+
+        input[type="checkbox"] {
+            width: 8px;
+            height: 8px;
+            margin: 0;
+        }
+
+        /* SECTION TITLE */
+        .section-title {
+            text-align: center;
+
+            color: #1680bf;
+            text-decoration: underline;
+
+            font-size: 8px;
+            font-weight: bold;
+
+            margin-top: 13px;
+            margin-bottom: 5px;
+        }
+
+        /* ACTIVITIES */
+        ul {
+            margin: 0 0 0 14px;
+            padding: 0;
+
+            font-size: 7px;
+            line-height: 1.5;
+        }
+
+        /* LINKS */
+        .links {
+            margin-top: 7px;
+        }
+
+        .links ol {
+            margin: 0 0 0 15px;
+            padding: 0;
+
+            font-size: 7px;
+            line-height: 1.5;
+        }
+
+        .links a {
+            color: #0075b5;
+        }
+
+        /* BUTTON */
+        .submit-container {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        button {
+            background: #087ab8;
+            color: white;
+
+            border: none;
+            border-radius: 3px;
+
+            padding: 5px 10px;
+
+            font-family: "Courier New", monospace;
+            font-size: 7px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #05689d;
+        }
+
+        /* FOOTER */
+        footer {
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+
+            width: 100%;
+
+            text-align: center;
+
+            font-size: 11px;
+            color: #333;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            body {
+                overflow: auto;
+            }
+
+            .page {
+                min-height: 100vh;
+                padding: 20px;
+            }
+
+            .application-box {
+                position: relative;
+                left: auto;
+                top: auto;
+
+                margin: 0 auto;
+
+                width: 300px;
+                max-width: 100%;
+            }
+
+            footer {
+                position: relative;
+                margin-top: 15px;
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="application-box">
+
+            <!-- Replace logo.png with your OBMC logo -->
+            <img src="logo.png" class="logo" alt="OBMC Logo">
+
+            <h1>OBMC Robotics Club<br>Application Form</h1>
+
+            <p class="intro">
+                Welcome! Please fill out this form to apply for our school's
+                Robotics Club.
+            </p>
+
+            <form>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="grade">Grade Level:</label>
+                <select id="grade" name="grade">
+                    <option>Grade 7</option>
+                    <option>Grade 8</option>
+                    <option>Grade 9</option>
+                    <option>Grade 10</option>
+                    <option>Grade 11</option>
+                    <option>Grade 12</option>
+                </select>
+
+                <div class="question">Gender:</div>
+
+                <div class="gender">
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+                </div>
+
+                <div class="question">What are your skills?</div>
+
+                <div class="skills">
+                    <label>
+                        <input type="checkbox" name="skills" value="coding">
+                        Coding
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="design">
+                        Design
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="skills" value="electronics">
+                        Electronics
+                    </label>
+                </div>
+
+                <label for="reason">
+                    Tell us why you want to join:
+                </label>
+
+                <textarea id="reason" name="reason"></textarea>
+
+                <div class="section-title">
+                    Top Robotics Activities We Offer:
+                </div>
+
+                <ul>
+                    <li>Line Following Robot</li>
+                    <li>Obstacle Avoidance Programming</li>
+                    <li>Light Following Robot</li>
+                </ul>
+
+                <div class="section-title">
+                    Helpful Links:
+                </div>
+
+                <div class="links">
+                    <ol>
+                        <li>
+                            <a href="https://www.robotics.org" target="_blank">
+                                Robotics.org
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.firstinspires.org" target="_blank">
+                                FIRST Robotics
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit">
+                        Submit Application
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <footer>
+            © 2025 Robotics Club Application | Created by [Your Name &amp; Section]
+        </footer>
+
+    </div>
+
+</body>
+</html>
