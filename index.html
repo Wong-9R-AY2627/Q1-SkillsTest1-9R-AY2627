@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blake Shalimar F. Wong | Portfolio</title>
+    <style>
+        /* Basic page setup */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        /* Top Navigation Bar */
+        .header {
+            background-color: #82549a;
+            color: white;
+            padding: 15px;
+            text-align: right;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        /* Hero Banner */
+        .banner {
+            background-color: #c0ccf3;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* Profile Picture Style */
+        .pfp-container {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 15px auto;
+            border: 3px solid #623078;
+        }
+
+        .pfp-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner h1 {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+
+        .banner span {
+            color: #176885;
+        }
+
+        /* Section Banner Headers */
+        .section-header {
+            background-color: #7b32a8;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 60%;
+            margin: 20px auto;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Portfolio Projects */
+        .project-table {
+            margin: 0 auto;
+            border-spacing: 20px;
+        }
+
+        .project-box {
+            border: 2px dashed #333333;
+            width: 240px;
+            height: 130px;
+            padding: 5px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        /* Contact Form */
+        .form-box {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 95%;
+            padding: 8px;
+            font-size: 13px;
+        }
+
+        .submit-btn {
+            background-color: #5b1786;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #82549a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <div class="header">
+        <a href="#about">About Me</a>
+        <a href="#works">My Works</a>
+        <a href="#contact">Contact Me</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="banner">
+        <div class="pfp-container">
+            <img src="https://i.pinimg.com/736x/36/48/d9/3648d96caee5c5e7b59ba417577960e7.jpg" alt="Profile Picture">
+        </div>
+        <h1>Hello, I'm <span>Blake Shalimar F. Wong</span></h1>
+        <p><i>Grade 9 - Ruby | Aspiring Web Developer</i></p>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about" class="section-header">About Me</div>
+    <p align="center">Hi! I'm Blake Shalimar F. Wong from 9 - Ruby. I'm a student passionate about technology, especially in web development. I enjoy creating simple and clean interactive projects.</p>
+
+    <!-- My Works Section -->
+    <div id="works" class="section-header">My Works</div>
+
+    <table class="project-table">
+        <!-- Project 1 -->
+        <tr>
+            <td>
+                <div class="project-box">
+                    <img src="Screenshot 2026-09-29 110122.png" alt="My Top Spotify Artist" class="project-img">
+                </div>
+                <div class="caption">My Favorite Spotify Artist</div>
+            </td>
+            <td>
+                <ul>
+                    <li>✓ HTML & CSS Projects</li>
+                    <li>✓ Spotify Artist</li>
+                    <li>✓ List, Links and Images</li>
+                    <li><a href="#">View GitHub Repository</a></li>
+                </ul>
+            </td>
+        </tr>
+
+        <!-- Project 2 -->
+        <tr>
+            <td>
+                <div class="project-box">
+                    <img src="Screenshot 2026-09-29 110053.png" alt="Rate a Movie Form" class="project-img">
+                </div>
+                <div class="caption">My Rate a Movie Form</div>
+            </td>
+            <td>
+                <ul>
+                    <li>✓ HTML & CSS Projects</li>
+                    <li>✓ HTML Forms</li>
+                    <li>✓ Movie Recommendations</li>
+                    <li><a href="#">View GitHub Repository</a></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <hr width="80%" color="#cccccc">
+
+    <!-- Contact Me Section -->
+    <div id="contact" class="section-header">Contact Me</div>
+
+    <div class="form-box">
+        <form>
+            <div class="form-group">
+                <label>Your Name:</label>
+                <input type="text" placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label>Your Email:</label>
+                <input type="email" placeholder="john_doe@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label>How did you find me?</label>
+                <input type="radio" name="source" value="FB"> Facebook
+                <input type="radio" name="source" value="IG"> Instagram <br>
+                <input type="radio" name="source" value="TT"> TikTok
+                <input type="radio" name="source" value="YT"> YouTube <br>
+                <input type="radio" name="source" value="Google"> Google
+                <input type="radio" name="source" value="Friends"> Friends
+            </div>
+
+            <div class="form-group">
+                <label>Interested In:</label>
+                <input type="checkbox" value="Arts"> Arts & Illustration
+                <input type="checkbox" value="Crafting"> Crafting & DIY <br>
+                <input type="checkbox" value="Photography"> Photography
+                <input type="checkbox" value="Music"> Music & Audio <br>
+                <input type="checkbox" value="Design"> Graphic Design
+                <input type="checkbox" value="Robotics"> Robotics
+            </div>
+
+            <div class="form-group">
+                <label>Rate my Portfolio:</label>
+                <select>
+                    <option>-- Select Rating --</option>
+                    <option>⭐⭐⭐⭐⭐</option>
+                    <option>⭐⭐⭐⭐</option>
+                    <option>⭐⭐⭐</option>
+                    <option>⭐⭐</option>
+                    <option>⭐</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Any Feedback?</label>
+                <textarea rows="4" placeholder="feedback here..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 Blake Shalimar F. Wong | 9 - Ruby. All rights reserved.
+    </div>
+
+</body>
+</html>
